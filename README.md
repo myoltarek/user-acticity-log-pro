@@ -30,6 +30,10 @@ This package automatically logs user activities in a Laravel application. It tra
 
 1. Install via Composer:
 
+## License
+
+MIT License
+
 ```bash
 composer require tarek111/user-activity-log-pro
 
