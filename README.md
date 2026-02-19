@@ -37,16 +37,14 @@ composer require tarek111/user-activity-log-pro
 php artisan vendor:publish --provider="Tarek\UserActivityLog\UserActivityLogServiceProvider"
 php artisan migrate
 
----
-
-## Configuration
+#Configuration
 config/activitylog.php
 return [
-    'log_methods' => ['POST', 'PUT', 'PATCH', 'DELETE'], // kon method log hobe
-    'log_guest_actions' => true, // guest actions log kora hobe
+    'log_methods' => ['POST', 'PUT', 'PATCH', 'DELETE'], // Methods
+    'log_guest_actions' => true, // guest actions log
 ];
 
-Usage
+#Usage
 1. Middleware
 
 // app/Http/Kernel.php
