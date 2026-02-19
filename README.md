@@ -28,4 +28,4 @@ Ei package ta Laravel apps er jonno. Sob user activity automatically log kore â€
 Composer diye install koro:
 
 ```bash
-composer require tarek/user-activity-log-pro
+composer require tarek111/user-activity-log-pro
