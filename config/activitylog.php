@@ -1,8 +1,5 @@
 <?php
 
 return [
-    'ignore_fields' => [
-        'password',
-        'remember_token'
-    ]
+    'log_methods' => ['POST', 'PUT', 'PATCH', 'DELETE'],
 ];

@@ -49,16 +49,7 @@ return [
 ];
 
 #Usage
-1. Middleware
-
-// app/Http/Kernel.php
-protected $middlewareGroups = [
-    'web' => [
-        \Tarek\UserActivityLog\Middleware\LogUserActivity::class,
-    ],
-];
-
-2. Model Trait
+1. Model Trait
 
 use Tarek\UserActivityLog\Traits\LogActivity;
 
@@ -67,7 +58,7 @@ class Customer extends Model
     use LogActivity;
 }
 
-3. Accessing Logs
+2. Accessing Logs
 
 UserActivityLog
 use Tarek\UserActivityLog\Models\UserActivityLog;
@@ -75,7 +66,7 @@ use Tarek\UserActivityLog\Models\UserActivityLog;
 // latest 10 logs
 $logs = UserActivityLog::latest()->take(10)->get();
 
-4. Example Columns
+3. Example Columns
 
 | Column       | Description                                   |
 | ------------ | --------------------------------------------- |
@@ -95,7 +86,7 @@ $logs = UserActivityLog::latest()->take(10)->get();
 | session_id   | Session ID                                    |
 | created_at   | Timestamp                                     |
 
-5. Logging Custom Actions
+4. Logging Custom Actions
 use Tarek\UserActivityLog\Helpers\ActivityLogger;
 
 ActivityLogger::log('action', 'Custom user action', [
@@ -105,7 +96,7 @@ ActivityLogger::log('action', 'Custom user action', [
     'new_data' => $customer->toArray()
 ]);
 
-6. Blade Example
+5. Blade Example
 <table class="table table-bordered">
     <thead>
         <tr>
